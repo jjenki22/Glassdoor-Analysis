@@ -1,9 +1,4 @@
----
-title: "Glassdoor Review Analysis"
-author: "Joe Jenkins"
-date: "3/15/2020"
-output: html_document
----
+# Glassdoor Review Analysis
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
