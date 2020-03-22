@@ -480,13 +480,25 @@ advice_text <- textProcessor(documents = advice_data$advice[-c(holdoutRows)],
 pro_prep <- prepDocuments(documents = pro_text$documents,
                           vocab = pro_text$vocab,
                           meta = pro_text$meta)
+```
+
+<img src="Visualizations/pro_prep.png">
+
+```r
 con_prep <- prepDocuments(documents = con_text$documents,
                           vocab = con_text$vocab,
                           meta = con_text$meta)
+```
+
+<img src="Visualizations/Con_Prep.png">
+
+```r
 advice_prep <- prepDocuments(documents = advice_text$documents,
                              vocab = advice_text$vocab,
                              meta = advice_text$meta)
 ```
+
+<img src="Visualizations/Advice_Prep.png">
 
 ### Determining Number of Topics:
 
@@ -499,6 +511,8 @@ pro_kTest <- searchK(documents = pro_prep$documents,
 plot(pro_kTest)
 ```
 
+<img src="Visualizations/Plot_Pro_kTest.png">
+
 #### Cons:
 
 ```r
@@ -508,6 +522,8 @@ con_kTest <- searchK(documents = con_prep$documents,
 plot(con_kTest)
 ```
 
+<img src="Visualizations/Plot_Con_kTest.png">
+
 #### Advice:
 
 ```r
@@ -516,6 +532,8 @@ advice_kTest <-  searchK(documents = advice_prep$documents,
                          K = c(10,20, 30, 40), verbose = FALSE)
 plot(advice_kTest)
 ```
+
+<img src="Visualizations/Plot_Advice_kTest.png">
 
 ### Plotting Topics:
 
@@ -528,6 +546,8 @@ pro_topics_20 <- stm(documents = pro_prep$documents,
 plot(pro_topics_20)
 ```
 
+<img src="Visualizations/plot_pro_topics_20.png">
+
 #### Cons:
 
 ```r
@@ -537,6 +557,8 @@ con_topics_30 <- stm(documents = con_prep$documents,
 plot(con_topics_30)
 ```
 
+<img src="Visualizations/
+
 #### Advice:
 
 ```r
@@ -545,6 +567,8 @@ advice_topics_20 <- stm(documents = advice_prep$documents,
                         K = 20, verbose = FALSE)
 plot(advice_topics_20)
 ```
+
+<img src="Visualizations/
 
 ### Labeling Topics:
 
