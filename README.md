@@ -700,6 +700,15 @@ compBenefitsRating_model <- lm(compBenefitsRating ~ pro_mean + advice_mean, data
 summary(compBenefitsRating_model)
 ```
 
+```r
+ggplot(glassdoor_model_data, aes(compBenefitsRating, pro_mean)) + geom_point() +
+  geom_smooth(method = "lm") + labs(title="Pro Mean Sentiment vs. Comp Benefits Rating",
+                                    x="Comp Benefits Rating",
+                                    y="Pro Mean Sentiment") + theme_classic()
+```
+
+<img src="Visualizations/Pro_Mean_Sentiment_vs_Comp_Benefits_Rating_LM.png">
+
 The model did not provide much prediction value with an Adjusted R-squared value of 0.0212.
 
 Managemnet Rating:
@@ -710,10 +719,21 @@ tree_mod <- rpart(
   data = glassdoor_model_data,
   control = rpart.control(cp = 0.005))
 tree_mod$variable.importance
+```
 
+```r
 compBenefitsRating_model <- lm(managementRating ~ pro_mean + advice_mean, data = glassdoor_model_data)
 summary(compBenefitsRating_model)
 ```
+
+```r
+ggplot(glassdoor_model_data, aes(managementRating, pro_mean)) + geom_point() +
+  geom_smooth(method = "lm") + labs(title="Pro Mean Sentiment vs. Management Rating",
+                                    x="Management Rating",
+                                    y="Pro Mean Sentiment") + theme_classic()
+```
+
+<img src="Visualizations/Pro_Mean_Sentiment_vs_Management_Rating_LM.png">
 
 The Adjusted R-squared value was very low and the model did not add much predictive value.
 
@@ -725,9 +745,21 @@ tree_mod <- rpart(
   data = glassdoor_model_data,
   control = rpart.control(cp = 0.005))
 tree_mod$variable.importance
+```
+
+```r
 compBenefitsRating_model <- lm(careerOpportunityRating ~ pro_mean + advice_mean + con_mean, data = glassdoor_model_data)
 summary(compBenefitsRating_model)
 ```
+
+```r
+ggplot(glassdoor_model_data, aes(pro_mean, careerOpportunityRating)) + geom_point() +
+  geom_smooth(method = "lm") + labs(title="Career Opportunity Rating vs. Pro Mean Sentiment",
+                                    x="Pro Mean Sentiment",
+                                    y="Career Opportunity Rating") + theme_classic()
+```
+
+<img src="Visualizations/Career_Opportunity_Rating_vs_Pro_Mean_Sentiment_LM.png">
 
 The Adjusted R-squared value was very low and the model did not add much predictive value.
 
