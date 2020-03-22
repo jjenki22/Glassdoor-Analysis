@@ -176,7 +176,7 @@ glassdoor_merge %>%
   geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Pro Sentiment")
 ```
 
-<img src="Visualizations/Cultural_Value_Rating_vs_Pro_Sentiment.png">
+<img src="Visualizations/Culture_Value_Rating_vs_Pro_Sentiment.png">
 
 ```r
 glassdoor_merge %>% 
@@ -185,7 +185,7 @@ glassdoor_merge %>%
   geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Con Sentiment")
 ```
 
-<img src="Visualizations/Cultural_Value_Rating_vs_Con_Sentiment.png">
+<img src="Visualizations/Culture_Value_Rating_vs_Con_Sentiment.png">
 
 ```r
 glassdoor_merge %>% 
