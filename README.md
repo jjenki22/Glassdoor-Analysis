@@ -747,8 +747,8 @@ tree_mod$variable.importance
 <img src="Visualizations/Predicting_Magement_Rating_Tree_Mod_Variable_Importance.png">
 
 ```r
-compBenefitsRating_model <- lm(managementRating ~ pro_mean + advice_mean, data = glassdoor_model_data)
-summary(compBenefitsRating_model)
+management_rating_model <- lm(managementRating ~ pro_mean + advice_mean, data = glassdoor_model_data)
+summary(management_rating_model)
 ```
 
 <img src="Visualizations/Predicting_Management_Rating_Model_LM.png">
@@ -777,8 +777,8 @@ tree_mod$variable.importance
 <img src="Visualizations/Predicting_Career_Opportunity_Rating_Tree_Mod_Variable_Importance.png">
 
 ```r
-compBenefitsRating_model <- lm(careerOpportunityRating ~ pro_mean + advice_mean + con_mean, data = glassdoor_model_data)
-summary(compBenefitsRating_model)
+career_opportunity_rating_model <- lm(careerOpportunityRating ~ pro_mean + advice_mean + con_mean, data = glassdoor_model_data)
+summary(career_opportunity_rating_model)
 ```
 
 <img src="Visualizations/Predicting_Career_Opportunity_Rating_Model_LM.png">
