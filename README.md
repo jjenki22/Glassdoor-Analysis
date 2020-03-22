@@ -709,3 +709,4 @@ The Adjusted R-squared value was very low and the model did not add much predict
 
 Overall, the sentiments alone do not do a great job of making predictions on glassdoor.
 
+
