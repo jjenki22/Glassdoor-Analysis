@@ -466,13 +466,25 @@ holdoutRows = sample(1:nrow(glassdoor_merge), 100, replace = FALSE)
 pro_text <- textProcessor(documents = pro_data$pros[-c(holdoutRows)], 
                          metadata = pro_data[-c(holdoutRows),],
                          stem = FALSE)
+```
+
+<img src="Visualizations/pro_text.png">
+
+```r
 con_text <- textProcessor(documents = cons_data$cons[-c(holdoutRows)],
                          metadata = cons_data[-c(holdoutRows),],
                          stem = FALSE)
+```
+
+<img src="Visualizations/Con_text.png">
+
+```r
 advice_text <- textProcessor(documents = advice_data$advice[-c(holdoutRows)],
                         metadata = advice_data[-c(holdoutRows),],
                         stem = FALSE)
 ```
+
+<img src="Visualizations/advice_text.png">
 
 ### Prep:
 
