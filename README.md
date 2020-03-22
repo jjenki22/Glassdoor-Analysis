@@ -693,12 +693,16 @@ tree_mod <- rpart(
 tree_mod$variable.importance
 ```
 
+<img src="Visualizations/Predicting_Comp_Benefits_Rating_Tree_Mod_Variable_Importance.png">
+
 I decided to use only pro_mean and advice_mean.
 
 ```r
 compBenefitsRating_model <- lm(compBenefitsRating ~ pro_mean + advice_mean, data = glassdoor_model_data)
 summary(compBenefitsRating_model)
 ```
+
+<img src="Visualizations/Predicting_Comp_Benefits_Rating_Model_LM.png">
 
 ```r
 ggplot(glassdoor_model_data, aes(compBenefitsRating, pro_mean)) + geom_point() +
@@ -721,10 +725,14 @@ tree_mod <- rpart(
 tree_mod$variable.importance
 ```
 
+<img src="Visualizations/Predicting_Magement_Rating_Tree_Mod_Variable_Importance.png">
+
 ```r
 compBenefitsRating_model <- lm(managementRating ~ pro_mean + advice_mean, data = glassdoor_model_data)
 summary(compBenefitsRating_model)
 ```
+
+<img src="Visualizations/Predicting_Management_Rating_Model_LM.png">
 
 ```r
 ggplot(glassdoor_model_data, aes(managementRating, pro_mean)) + geom_point() +
@@ -747,10 +755,14 @@ tree_mod <- rpart(
 tree_mod$variable.importance
 ```
 
+<img src="Visualizations/Predicting_Career_Opportunity_Rating_Tree_Mod_Variable_Importance.png">
+
 ```r
 compBenefitsRating_model <- lm(careerOpportunityRating ~ pro_mean + advice_mean + con_mean, data = glassdoor_model_data)
 summary(compBenefitsRating_model)
 ```
+
+<img src="Visualizations/Predicting_Career_Opportunity_Rating_Model_LM.png">
 
 ```r
 ggplot(glassdoor_model_data, aes(pro_mean, careerOpportunityRating)) + geom_point() +
