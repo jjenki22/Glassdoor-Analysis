@@ -118,17 +118,17 @@ I created plots for each rating in the table versuses the three sentiments. In a
 ```{r}
 glassdoor_merge$rating <- as.numeric(glassdoor_merge$rating)
 glassdoor_merge %>% 
-  filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(pro_mean, rating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Rating")
 glassdoor_merge %>% 
-  filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(con_mean, rating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Rating")
 glassdoor_merge %>% 
-  filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(advice_mean, rating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Rating")
 ```
 
 ### Worklife Rating vs. Sentiment 
@@ -137,15 +137,18 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(pro_mean, workLifeRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Work Life Rating")
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(con_mean, workLifeRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Work Life Rating")
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(advice_mean, workLifeRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Work Life Rating")
 ```
 
 ### Culture Value Rating vs. Sentiment 
@@ -154,15 +157,18 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(pro_mean, cultureValueRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Cultural Value Rating")
 glassdoor_merge %>% 
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(con_mean, cultureValueRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Cultural Value Rating")
 glassdoor_merge %>% 
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(advice_mean, cultureValueRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Cultural Value Rating")
 ```
 
 ### Career Opportunity Rating vs. Sentiment 
@@ -171,15 +177,18 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(pro_mean, careerOpportunityRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Career Opportunity Rating")
 glassdoor_merge %>% 
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(con_mean, careerOpportunityRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Career Opportunity Rating")
 glassdoor_merge %>% 
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(advice_mean, careerOpportunityRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Career Oppirtunity Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Career Opportunity Rating")
 ```
 
 ### Comp Benefits Rating vs. Sentiment 
@@ -189,10 +198,12 @@ glassdoor_merge %>%
   filter(!is.na(compBenefitsRating)) %>% 
   ggplot(., aes(pro_mean, compBenefitsRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Pro Sentiment")
+
 glassdoor_merge %>% 
   filter(!is.na(compBenefitsRating)) %>% 
   ggplot(., aes(con_mean, compBenefitsRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Con Sentiment")
+
 glassdoor_merge %>% 
   filter(!is.na(compBenefitsRating)) %>% 
   ggplot(., aes(advice_mean, compBenefitsRating)) + facet_wrap(~organization) +
@@ -205,15 +216,18 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(pro_mean, managementRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Management Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Management Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Management Rating")
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(con_mean, managementRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Management Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Management Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Management Rating")
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(advice_mean, managementRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Management Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Management Rating vs. Advice Sentiment",
+                                   x = "Advice Mean Sentiment", y = "Management Rating")
 ```
 
 ## Plots without being broken out by company 
@@ -224,15 +238,20 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(pro_mean, rating)) + 
-  geom_point() + theme_bw() + labs(title = "Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(con_mean, rating)) + 
-  geom_point() + theme_bw() + labs(title = "Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(advice_mean, rating)) + 
-  geom_point() + theme_bw() + labs(title = "Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Rating")
 ```
 
 ### Worklife Rating vs. Sentiment 
@@ -241,15 +260,20 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(pro_mean, workLifeRating)) + 
-  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Work Life Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(con_mean, workLifeRating)) + 
-  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Work Life Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(advice_mean, workLifeRating)) + 
-  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Work Life Rating")
 ```
 
 ### Culture Value Rating vs. Sentiment 
@@ -258,15 +282,20 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(pro_mean, cultureValueRating)) +
-  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Culture Value Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(con_mean, cultureValueRating)) +
-  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Culture Value Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(advice_mean, cultureValueRating)) +
-  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Culture Value Rating")
 ```
 
 ### Career Opportunity Rating vs. Sentiment 
@@ -275,15 +304,20 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(pro_mean, careerOpportunityRating)) +
-  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Career Opportunity Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(con_mean, careerOpportunityRating)) + 
-  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Career Opportunity Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(advice_mean, careerOpportunityRating)) +
-  geom_point() + theme_bw() + labs(title = "Career Oppirtunity Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Career Opportunity Rating")
 ```
 
 ### Comp Benefits Rating vs. Sentiment 
@@ -291,16 +325,21 @@ glassdoor_merge %>%
 ```{r}
 glassdoor_merge %>% 
   filter(!is.na(compBenefitsRating)) %>% 
-  ggplot(., aes(pro_mean, compBenefitsRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Pro Sentiment")
+  ggplot(., aes(pro_mean, compBenefitsRating)) +
+  geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Comp Benefits Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(compBenefitsRating)) %>% 
-  ggplot(., aes(con_mean, compBenefitsRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Con Sentiment")
+  ggplot(., aes(con_mean, compBenefitsRating)) +
+  geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Comp Benefits Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(compBenefitsRating)) %>% 
   ggplot(., aes(advice_mean, compBenefitsRating)) + facet_wrap(~organization) +
-  geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Comp Benefits Rating")
 ```
 
 ### Management Rating vs. Sentiment 
@@ -309,15 +348,20 @@ glassdoor_merge %>%
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(pro_mean, managementRating)) + 
-  geom_point() + theme_bw() + labs(title = "Management Rating vs. Pro Sentiment")
+  geom_point() + theme_bw() + labs(title = "Management Rating vs. Pro Sentiment",
+                                   x="Pro Mean Sentiment", y="Management Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(con_mean, managementRating)) +
-  geom_point() + theme_bw() + labs(title = "Management Rating vs. Con Sentiment")
+  geom_point() + theme_bw() + labs(title = "Management Rating vs. Con Sentiment",
+                                   x="Con Mean Sentiment", y="Management Rating")
+
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(advice_mean, managementRating)) +
-  geom_point() + theme_bw() + labs(title = "Management Rating vs. Advice Sentiment")
+  geom_point() + theme_bw() + labs(title = "Management Rating vs. Advice Sentiment",
+                                   x="Advice Mean Sentiment", y="Management Rating")
 ```
 
 ## Topic Models:
@@ -524,8 +568,9 @@ After reviewing the output, the variables are all significant and the model outp
 
 ```{r}
 ggplot(glassdoor_model_data, aes(careerOpportunityRating, rating)) + geom_point() +
-  geom_smooth(method = "lm") + ggtitle("Rating vs. Career Opportunity") +
-  theme_classic()
+  geom_smooth(method = "lm") + labs(title="Rating vs. Career Opportunity Rating",
+                                       x="Career Opportunity Rating",
+                                       y="Rating") + theme_classic()
 ```
 
 #### Making Predictions with only Sentiments
@@ -560,8 +605,12 @@ tree_mod <- rpart(
   control = rpart.control(cp = 0.005))
 tree_mod$variable.importance
 
-compBenefitsRating_model <- lm(managementRating ~ pro_mean + advice_mean, data = glassdoor_model_data)
-summary(compBenefitsRating_model)
+management_rating_model <- lm(managementRating ~ pro_mean + advice_mean, data = glassdoor_model_data)
+summary(management_rating_model)
+ggplot(glassdoor_model_data, aes(managementRating, pro_mean)) + geom_point() +
+  geom_smooth(method = "lm") + labs(title="Pro Mean Sentiment vs. Management Rating",
+                                    x="Management Rating",
+                                    y="Pro Mean Sentiment") + theme_classic()
 ```
 
 The Adjusted R-squared value was very low and the model did not add much predictive value.
@@ -574,8 +623,12 @@ tree_mod <- rpart(
   data = glassdoor_model_data,
   control = rpart.control(cp = 0.005))
 tree_mod$variable.importance
-compBenefitsRating_model <- lm(careerOpportunityRating ~ pro_mean + advice_mean + con_mean, data = glassdoor_model_data)
-summary(compBenefitsRating_model)
+career_opportunity_rating_model <- lm(careerOpportunityRating ~ pro_mean + advice_mean + con_mean, data = glassdoor_model_data)
+summary(career_opportunity_rating_model)
+ggplot(glassdoor_model_data, aes(pro_mean, careerOpportunityRating)) + geom_point() +
+  geom_smooth(method = "lm") + labs(title="Career Opportunity Rating vs. Pro Mean Sentiment",
+                                    x="Pro Mean Sentiment",
+                                    y="Career Opportunity Rating") + theme_classic()
 ```
 
 The Adjusted R-squared value was very low and the model did not add much predictive value.
