@@ -476,7 +476,7 @@ con_text <- textProcessor(documents = cons_data$cons[-c(holdoutRows)],
                          stem = FALSE)
 ```
 
-<img src="Visualizations/Con_text.png">
+<img src="Visualizations/Con_Text.png">
 
 ```r
 advice_text <- textProcessor(documents = advice_data$advice[-c(holdoutRows)],
