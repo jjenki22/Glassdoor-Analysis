@@ -147,7 +147,7 @@ glassdoor_merge %>%
   geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Pro Sentiment")
 ```
 
-<img src="Visualizations/Work_Life_Rating_Pro_Sentiment.png">
+<img src="Visualizations/Work_Life_Rating_vs_Pro_Sentiment.png">
 
 ```r
 glassdoor_merge %>% 
@@ -156,7 +156,7 @@ glassdoor_merge %>%
   geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Con Sentiment")
 ```
 
-<img src="Visualizations/Work_Life_Rating_Con_Sentiment.png">
+<img src="Visualizations/Work_Life_Rating_vs_Con_Sentiment.png">
 
 ```r
 glassdoor_merge %>% 
@@ -165,7 +165,7 @@ glassdoor_merge %>%
   geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Advice Sentiment")
 ```
 
-<img src="Visualizations/Work_Life_Rating_Advice_Sentiment.png">
+<img src="Visualizations/Work_Life_Rating_vs_Advice_Sentiment.png">
 
 ### Culture Value Rating vs. Sentiment:
 
