@@ -243,7 +243,7 @@ glassdoor_merge %>%
   geom_point() + theme_bw() + labs(title = "Management Rating vs. Con Sentiment")
 ```
 
-<img src="Visualizations/Management_Rating_Con_Sentiment.png">
+<img src="Visualizations/Management_Rating_vs_Con_Sentiment.png">
 
 ```r
 glassdoor_merge %>% 
@@ -252,7 +252,7 @@ glassdoor_merge %>%
   geom_point() + theme_bw() + labs(title = "Management Rating vs. Advice Sentiment")
 ```
 
-<img src="Visualizations/Management_Rating_vs_Advice_Sentiment.png">
+<img src="Visualizations/Management_Rating_vs_Advice Sentiment.png">
 
 ## Topic Models:
 
