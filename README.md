@@ -664,6 +664,8 @@ tree_mod <- rpart(
 tree_mod$variable.importance
 ```
 
+<img src="Visualizations/Predicting_Rating_Tree_Mod_Variable_Importance.png">
+
 After reviewing the output, I decided to use careerOpportunityRating, managemnetRating, cultureValueRating, pro_mean, and con_mean. Then, I ran a regression.
 
 ```r
@@ -671,13 +673,18 @@ rating_model <- lm(rating ~ careerOpportunityRating + managementRating + culture
 summary(rating_model)
 ```
 
+<img src="Visualizations/Predicting_Ratings_Model_LM.png">
+
 After reviewing the output, the variables are all significant and the model outputted an Adjusted R-squared value of 0.384. In addition, I created a plot below.
 
 ```r
 ggplot(glassdoor_model_data, aes(careerOpportunityRating, rating)) + geom_point() +
-  geom_smooth(method = "lm") + ggtitle("Rating vs. Career Opportunity") +
-  theme_classic()
+  geom_smooth(method = "lm") + labs(title="Rating vs. Career Opportunity Rating",
+                                       x="Career Opportunity Rating",
+                                       y="Rating") + theme_classic()
 ```
+
+<img src="Visualizations/Rating_vs_Career_Opportunity_Rating_LM.png">
 
 #### Making Predictions with only Sentiments
 
