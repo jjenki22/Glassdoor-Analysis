@@ -783,5 +783,3 @@ ggplot(glassdoor_model_data, aes(pro_mean, careerOpportunityRating)) + geom_poin
 The Adjusted R-squared value was very low and the model did not add much predictive value.
 
 Overall, the sentiments alone do not do a great job of making predictions on glassdoor.
-
-
