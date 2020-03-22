@@ -116,31 +116,56 @@ glassdoor_merge %>%
   filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(pro_mean, rating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Rating vs. Pro Sentiment")
+```
+
+<img src="Visualizations/Rating_vs_Pro_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(con_mean, rating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Rating vs. Con Sentiment")
+```
+
+<img src="Visualizations/Rating_vs_Con_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(advice_mean)) %>% 
   ggplot(., aes(advice_mean, rating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Rating vs. Advice Sentiment")
 ```
-### Worklife Rating vs. Sentiment:
+
+<img src="Visualizations/Rating_vs_Advice_Sentiment.png">
+
+### Work Life Rating vs. Sentiment:
 
 ```r
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(pro_mean, workLifeRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Pro Sentiment")
+```
+
+<img src="Visualizations/Work_Life_Rating_Pro_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(con_mean, workLifeRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Con Sentiment")
+```
+
+<img src="Visualizations/Work_Life_Rating_Con_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(workLifeRating)) %>% 
   ggplot(., aes(advice_mean, workLifeRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Work Life Rating vs. Advice Sentiment")
 ```
+
+<img src="Visualizations/Work_Life_Rating_Advice_Sentiment.png">
 
 ### Culture Value Rating vs. Sentiment:
 
@@ -149,15 +174,27 @@ glassdoor_merge %>%
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(pro_mean, cultureValueRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Pro Sentiment")
+```
+
+<img src="Visualizations/Cultural_Value_Rating_vs_Pro_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(con_mean, cultureValueRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Con Sentiment")
+```
+
+<img src="Visualizations/Cultural_Value_Rating_vs_Con_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(cultureValueRating)) %>% 
   ggplot(., aes(advice_mean, cultureValueRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Culture Value Rating vs. Advice Sentiment")
 ```
+
+<img src="Visualizations/Cultural_Value_Rating_vs_Advice_Sentiment.png">
 
 ### Career Opportunity Rating vs. Sentiment 
 
@@ -166,32 +203,56 @@ glassdoor_merge %>%
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(pro_mean, careerOpportunityRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Pro Sentiment")
+```
+
+<img src="Visualizations/Career_Opportunity_Rating_vs_Pro_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(con_mean, careerOpportunityRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Career Opportunity Rating vs. Con Sentiment")
+```
+
+<img src="Visualizations/Career_Opportunity_Rating_vs_Con_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(careerOpportunityRating)) %>% 
   ggplot(., aes(advice_mean, careerOpportunityRating)) + facet_wrap(~organization) +
   geom_point() + theme_bw() + labs(title = "Career Oppirtunity Rating vs. Advice Sentiment")
 ```
 
-### Comp Benefits Rating vs. Sentiment:
+<img src="Visualizations/Career_Opportunity_Rating_vs_Con_Sentiment.png">
+
+### Management Rating vs. Sentiment:
 
 ```r
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(pro_mean, managementRating)) + 
   geom_point() + theme_bw() + labs(title = "Management Rating vs. Pro Sentiment")
+```
+
+<img src="Visualizations/Management_Rating_vs_Pro_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(con_mean, managementRating)) +
   geom_point() + theme_bw() + labs(title = "Management Rating vs. Con Sentiment")
+```
+
+<img src="Visualizations/Management_Rating_Con_Sentiment.png">
+
+```r
 glassdoor_merge %>% 
   filter(!is.na(managementRating)) %>% 
   ggplot(., aes(advice_mean, managementRating)) +
   geom_point() + theme_bw() + labs(title = "Management Rating vs. Advice Sentiment")
 ```
+
+<img src="Visualizations/Management_Rating_vs_Advice_Sentiment.png">
 
 ## Topic Models:
 
