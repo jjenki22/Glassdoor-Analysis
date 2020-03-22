@@ -558,7 +558,7 @@ pro_topics_20 <- stm(documents = pro_prep$documents,
 plot(pro_topics_20)
 ```
 
-<img src="Visualizations/plot_pro_topics_20.png">
+<img src="Visualizations/Pro_Topics_20.png">
 
 #### Cons:
 
@@ -569,7 +569,7 @@ con_topics_30 <- stm(documents = con_prep$documents,
 plot(con_topics_30)
 ```
 
-<img src="Visualizations/
+<img src="Visualizations/Con_Topics_30.png">
 
 #### Advice:
 
@@ -580,7 +580,7 @@ advice_topics_20 <- stm(documents = advice_prep$documents,
 plot(advice_topics_20)
 ```
 
-<img src="Visualizations/
+<img src="Visualizations/Advice_Topics_20.png">
 
 ### Labeling Topics:
 
