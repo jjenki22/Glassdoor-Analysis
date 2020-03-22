@@ -362,7 +362,7 @@ glassdoor_merge %>%
                                    x="Pro Mean Sentiment", y="Career Opportunity Rating")
 ```
 
-<img src="Visualizations/Career_Opportunity_Rating_vs_Pro_Sentiment_All.png">
+<img src="Visualizations/Career_Opportunity_Rating_vs_Pro_Rating_All.png">
 
 ```r
 glassdoor_merge %>% 
