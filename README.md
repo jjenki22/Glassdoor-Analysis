@@ -409,7 +409,7 @@ glassdoor_merge %>%
 ```r
 glassdoor_merge %>% 
   filter(!is.na(compBenefitsRating)) %>% 
-  ggplot(., aes(advice_mean, compBenefitsRating)) + facet_wrap(~organization) +
+  ggplot(., aes(advice_mean, compBenefitsRating)) +
   geom_point() + theme_bw() + labs(title = "Comp Benefits Rating vs. Advice Sentiment",
                                    x="Advice Mean Sentiment", y="Comp Benefits Rating")
 ```
